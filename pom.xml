@@ -31,15 +31,13 @@
 		<java.version>21</java.version>
 	</properties>
 
-	<repositories>
+	<distributionManagement>
 		<repository>
 			<id>github</id>
-			<name>GitHub mr-java-crypto Maven Packages</name>
-			<url>https://github.com/1sm1rk/mr-java-crypto</url>
-			<!-- also tried:
-        <url>https://maven.pkg.github.com/HelloMaven/</url> -->
+			<name>GitHub OWNER Apache Maven Packages</name>
+			<url>https://maven.pkg.github.com/1sm1rk/mr-java-crypto</url>
 		</repository>
-	</repositories>
+	</distributionManagement>
 
 	<dependencies>
 		<!-- add later when needed
@@ -67,6 +65,7 @@
 			<artifactId>spring-security-test</artifactId>
 			<scope>test</scope>
 		</dependency>
+
 		<dependency>
 			<groupId>de.homelabs.moonrat</groupId>
 			<artifactId>mr-java-crypto</artifactId>
