@@ -31,7 +31,7 @@ public class KeyController {
 	public ResponseEntity<String> getPublicKey() {		
 		HttpHeaders headers = new HttpHeaders();
 		headers.set("Content-Type", "application/pkcs8");
-		byte[] data = datastationService.getPublicKey().getEncoded();
+		byte[] data = datastationService.getPublicKey(true);
 		
 		String output = new String(Base64.getEncoder().encode(data)); 
 		return new ResponseEntity<String>(output, headers, HttpStatus.OK);
