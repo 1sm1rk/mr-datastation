@@ -24,7 +24,7 @@ public class BearerTokenResolver {
 	private static String resolveFromAuthorizationHeader(HttpServletRequest request) {
 		String authorization = request.getHeader("Authorization");
 		
-		log.debug("AuthHeader: ", authorization);
+		log.info("AuthHeader: ", authorization);
 		
 		if (StringUtils.hasText(authorization) && authorization.startsWith("Bearer")) {
 			Matcher matcher = authorizationPattern.matcher(authorization);

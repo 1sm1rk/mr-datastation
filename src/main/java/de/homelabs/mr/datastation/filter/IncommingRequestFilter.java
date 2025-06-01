@@ -29,11 +29,11 @@ public class IncommingRequestFilter extends OncePerRequestFilter {
 	protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain)
 			throws ServletException, IOException {
 
-		log.debug("RequestURI: "+request.getRequestURI());
+		log.info("RequestURI: "+request.getRequestURI());
 	
 		String token = tokenResolver.resolve(request);
 		
-		log.debug("token: "+token);
+		log.info("token: "+token);
 		
 		if (StringUtils.hasLength(token)) {
 			List<GrantedAuthority> authorities = new ArrayList<GrantedAuthority>();
