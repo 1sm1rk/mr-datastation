@@ -30,8 +30,16 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Build Docker image
-        run: docker build -t ghcr.io/${{ github.repository }}:latest .
+      #- name: Build Docker image
+      #  run: docker build -t ghcr.io/${{ github.repository }}:latest .
 
-      - name: Push Docker image
-        run: docker push ghcr.io/${{ github.repository }}:latest
+      #- name: Push Docker image
+      #  run: docker push ghcr.io/${{ github.repository }}:latest
+
+      - name: Build and Push image
+        uses: docker/build-push-action@v4
+        with:
+          context: .
+          file: /Dockerfile
+          push: true
+          tags: ${{ GITHUB_ACTOR}}/mr-datastation:latest
