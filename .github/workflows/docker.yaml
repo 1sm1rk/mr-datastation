@@ -42,4 +42,4 @@ jobs:
           context: .
           file: /Dockerfile
           push: true
-          tags: ${env.GITHUB_ACTOR}/mr-datastation:latest
+          tags: ${{ github.actor }}/mr-datastation:latest
