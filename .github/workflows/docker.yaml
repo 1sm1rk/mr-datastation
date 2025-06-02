@@ -43,4 +43,4 @@ jobs:
           context: .
           #file: /Dockerfile
           push: true
-          tags: ${{ github.actor }}/mr-datastation:latest
+          tags: ghcr.io/${{ github.actor }}/mr-datastation:latest
