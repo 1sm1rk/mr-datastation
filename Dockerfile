@@ -5,7 +5,7 @@ FROM eclipse-temurin:21
 WORKDIR /app
 
 # copy jar from previous stage
-COPY --from=build /app/target/*.jar app.jar
+COPY /target/*.jar app.jar
 
 # eXpose port
 # EXPOSE 8080
